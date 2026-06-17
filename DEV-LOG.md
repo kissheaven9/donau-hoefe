@@ -117,3 +117,14 @@ Rückmeldung Olga: zu viele eigene Interpretationen. Korrigiert, strikt nach Dat
 - Text: Hero-Sub „In Gundelfingen a.d. Donau …"; Projekt-H2 „Hier entsteht ein neues Zuhause."; **Fläche nur Block 2 → 24.000 m²** (Kennzahl/Meta bleiben 22.000 — so gewünscht). Negativ-Begriffe entfernt: „Schwarz-Areal", „Brachfläche", „ehemalig", „Areal" (auch OG/JSON-LD/alt).
 - Closing-Caption ~1 cm tiefer (Ursache: `.band .container` Padding 7rem → `#closing` padding-bottom reduziert).
 - Mobil-Hero: eigenes Foto „фото первый экран для телефона" via `<picture media>`, zentriert.
+
+## 2026-06-17 — Recht + Security + Formular
+- Text „Investieren in die Zukunft" → „Investieren **Sie** in die Zukunft" (H1, OG, Twitter, OG-Bild neu).
+- Mobil: Tipp-Wort auf eigener Zeile (`<br class="only-mob">`) → kein Springen; H1 mobil etwas kleiner (kein Abschneiden).
+- **Pflicht-Checkbox** Datenschutz-Zustimmung vor dem Button (unchecked, required, Link); JS-Validierung blockiert Versand ohne Häkchen.
+- **Honeypot** (`name="_gotcha"`, off-screen) gegen Spam-Bots; JS bricht still ab, Formspree filtert serverseitig.
+- `<meta name="referrer" content="strict-origin-when-cross-origin">`; keine externen `target=_blank`-Links; keine Secrets im Repo (geprüft); Enforce HTTPS aktiv.
+- **impressum.html** neu (Struktur wie datenschutz.html, § 5 DDG vollständig: GU-FI GmbH, Anschrift, GF, HRB 36880 AG Augsburg, USt-IdNr. DE436392539, § 18 MStV). Footer auf ALLEN Seiten: „Impressum · Datenschutz". In sitemap.xml ergänzt.
+- Datenschutz korrigiert: Schriften **self-hosted** (kein Google Fonts), Karte = statisches Bild (keine externen Dienste) → **kein Cookie-Banner nötig**.
+- Recht-Nische (Investment): keine Renditeversprechen; Disclaimer „unverbindlich, Änderungen vorbehalten" vorhanden.
+- Favicon = `фавикон.png` (Kundin), Multi-Size .ico (16/32/48) + Cache-Bust `?v=2`.

@@ -90,16 +90,19 @@
   var form = document.getElementById("contactForm");
   var success = document.getElementById("formSuccess");
 
+  function errEl(field) {
+    return document.querySelector('.field__error[data-for="' + field.id + '"]');
+  }
   function showError(field, msg) {
-    var wrap = field.closest(".field");
+    var wrap = field.closest(".field, .field-check");
     if (wrap) wrap.classList.add("is-invalid");
-    var err = wrap ? wrap.querySelector(".field__error") : null;
+    var err = errEl(field);
     if (err) err.textContent = msg;
   }
   function clearError(field) {
-    var wrap = field.closest(".field");
+    var wrap = field.closest(".field, .field-check");
     if (wrap) wrap.classList.remove("is-invalid");
-    var err = wrap ? wrap.querySelector(".field__error") : null;
+    var err = errEl(field);
     if (err) err.textContent = "";
   }
   function validate() {
@@ -120,6 +123,10 @@
     if (!message.value.trim()) { showError(message, "Bitte schreiben Sie uns eine kurze Nachricht."); ok = false; }
     else clearError(message);
 
+    var consent = form.querySelector("#consent");
+    if (consent && !consent.checked) { showError(consent, "Bitte stimmen Sie der Datenschutzerklärung zu."); ok = false; }
+    else if (consent) clearError(consent);
+
     return ok;
   }
 
@@ -131,8 +138,11 @@
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      // Honeypot: ausgefüllt = Bot -> still abbrechen
+      var hp = form.querySelector('[name="_gotcha"]');
+      if (hp && hp.value) { return; }
       if (!validate()) {
-        var firstInvalid = form.querySelector(".field.is-invalid input, .field.is-invalid textarea");
+        var firstInvalid = form.querySelector(".field.is-invalid input, .field.is-invalid textarea, .field-check.is-invalid input");
         if (firstInvalid) firstInvalid.focus();
         return;
       }

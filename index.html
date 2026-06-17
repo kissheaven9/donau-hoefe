@@ -6,11 +6,12 @@
   <title>DONAU HÖFE — Neues Wohnquartier in Gundelfingen a.d. Donau | GU-FI GmbH</title>
   <meta name="description" content="DONAU HÖFE: ein nachhaltiges, klimaneutral geplantes Wohnquartier auf rund 22.000 m² in Gundelfingen a.d. Donau. Für Investoren: Grundstückserwerb, Projektentwicklung nach Maß und gemeinsame Entwicklung." />
   <meta name="theme-color" content="#1e3006" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <link rel="canonical" href="https://donau-hoefe.de/" />
   <link rel="alternate" hreflang="de" href="https://donau-hoefe.de/" />
   <link rel="alternate" hreflang="x-default" href="https://donau-hoefe.de/" />
 
-  <meta property="og:title" content="DONAU HÖFE — Investieren in die Zukunft" />
+  <meta property="og:title" content="DONAU HÖFE — Investieren Sie in die Zukunft" />
   <meta property="og:description" content="Ein lebendiges, nachhaltiges Wohnquartier in Gundelfingen a.d. Donau, Bayerisch-Schwaben." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
@@ -21,16 +22,16 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="DONAU HÖFE — Wohnquartier in Gundelfingen a.d. Donau" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DONAU HÖFE — Investieren in die Zukunft" />
+  <meta name="twitter:title" content="DONAU HÖFE — Investieren Sie in die Zukunft" />
   <meta name="twitter:description" content="Ein nachhaltiges Wohnquartier in Gundelfingen a.d. Donau. Für Investoren." />
   <meta name="twitter:image" content="https://donau-hoefe.de/assets/img/og-image.jpg" />
 
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="assets/img/favicon-32.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="icon" href="favicon.ico?v=2" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png?v=2" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2" />
   <link rel="manifest" href="site.webmanifest" />
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=19" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=21" />
 </head>
 <body>
 
@@ -66,7 +67,7 @@
       <div class="container">
         <div class="hero__inner">
           <p class="hero__kicker">Gundelfingen a.d. Donau<br />Bayerisch-Schwaben</p>
-          <h1>Wir schaffen ein <span class="hl-type" id="typeWord">nachhaltiges</span><span class="hl-caret" id="typeCaret" aria-hidden="true"></span><br />Zuhause.<span class="claim">Investieren in die Zukunft.</span></h1>
+          <h1>Wir schaffen ein <br class="only-mob" /><span class="hl-type" id="typeWord">nachhaltiges</span><span class="hl-caret" id="typeCaret" aria-hidden="true"></span><br />Zuhause.<span class="claim">Investieren Sie in die Zukunft.</span></h1>
           <p class="hero__sub">In Gundelfingen a.d. Donau entsteht ein lebendiges, nachhaltiges Quartier zum Wohnen — mitten in Bayerisch-Schwaben.</p>
           <a href="#investment" class="btn btn--cream">Möglichkeiten besprechen</a>
         </div>
@@ -283,8 +284,13 @@
             <div class="field" id="f-email"><label for="email">E-Mail</label><input type="email" id="email" name="email" placeholder="ihre@email.de" required autocomplete="email" /><span class="field__error" data-for="email"></span></div>
             <div class="field" id="f-interest"><label for="interest">Ihr Interesse</label><input type="text" id="interest" name="interesse" placeholder="z. B. Grundstück, Projektentwicklung" /><span class="field__error" data-for="interest"></span></div>
             <div class="field" id="f-message"><label for="message">Nachricht</label><textarea id="message" name="nachricht" placeholder="Worum geht es?" required></textarea><span class="field__error" data-for="message"></span></div>
+            <div class="hp-field" aria-hidden="true"><label for="website">Website (bitte leer lassen)</label><input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off" /></div>
+            <div class="field-check" id="f-consent">
+              <input type="checkbox" id="consent" name="consent" required />
+              <label for="consent">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+            </div>
+            <span class="field__error" data-for="consent"></span>
             <button type="submit" class="btn btn--solid">Unterlagen anfordern</button>
-            <p class="form__note">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben gemäß <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
             <div class="form__success" id="formSuccess" role="status">Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.</div>
           </form>
       </div>
@@ -307,7 +313,7 @@
       </p>
       <div class="footer__bottom">
         <span>© <span id="year">2026</span> GU-FI GmbH. Alle Rechte vorbehalten.</span>
-        <a href="datenschutz.html">Datenschutz</a>
+        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
       </div>
     </div>
   </footer>
@@ -350,6 +356,6 @@
     ]
   }
   </script>
-  <script src="assets/js/app.js?v=19"></script>
+  <script src="assets/js/app.js?v=21"></script>
 </body>
 </html>

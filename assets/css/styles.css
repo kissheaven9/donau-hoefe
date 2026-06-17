@@ -168,6 +168,7 @@ strong { font-weight: 600; }
 .hl-type { color: var(--pale); }
 .hl-caret { display: inline-block; width: .5ch; height: .82em; margin-left: .02em; background: var(--pale); transform: translateY(.08em); animation: caretBlink 1s steps(1) infinite; }
 @keyframes caretBlink { 50% { opacity: 0; } }
+.only-mob { display: none; }   /* Zeilenumbruch nur mobil: Tipp-Wort eigene Zeile (kein Springen) */
 @media (prefers-reduced-motion: reduce) { .hl-caret { display: none; } }
 .hero__sub { font-size: clamp(1.1rem,1.7vw,1.4rem); line-height: 1.45; color: var(--cream); max-width: 620px; margin-bottom: 1.6rem; }
 .hero, .hero * { text-shadow: 0 2px 24px rgba(10,18,2,.4); }
@@ -312,6 +313,12 @@ strong { font-weight: 600; }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--olive); }
 .field.is-invalid input, .field.is-invalid textarea { border-color: #c0392b; }
 .field__error { font-size: .85rem; color: #c0392b; min-height: 1em; }
+.hp-field { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+.field-check { display: flex; align-items: flex-start; gap: .6rem; margin-top: .3rem; }
+.field-check input[type="checkbox"] { width: 20px; height: 20px; flex: none; margin-top: .15rem; accent-color: var(--olive); cursor: pointer; }
+.field-check label { font-size: .9rem; line-height: 1.4; color: var(--ink); }
+.field-check a { text-decoration: underline; color: var(--olive); }
+.field-check.is-invalid input[type="checkbox"] { outline: 2px solid #c0392b; outline-offset: 2px; }
 .form__note { font-size: .85rem; color: var(--muted); }
 .form__note a { text-decoration: underline; color: var(--olive); }
 .form__success { display: none; padding: 1.1rem 1.3rem; border-radius: 0; background: #eef1e2; border: 2px solid var(--olive); color: var(--ink); }
@@ -397,11 +404,13 @@ strong { font-weight: 600; }
   .hero__media img { object-position: center 45%; }   /* eigenes Mobil-Foto (Kinder mit Ball) */
   .hl-type, .hl-caret { color: var(--orange); }
   .hl-caret { background: var(--orange); }
+  .only-mob { display: inline; }   /* Tipp-Wort auf eigene Zeile */
   .hero::after { display: none; }
   .hero .container { position: static; padding-top: 1.6rem; padding-bottom: .25rem; }
   .hero__inner { margin-top: 0; max-width: none; }
   .hero, .hero * { text-shadow: none; }
   .hero__kicker, .hero h1, .hero h1 .claim, .hero__sub { color: var(--ink); }
+  .hero h1 { font-size: clamp(1.8rem, 7.4vw, 2.5rem); }
   .hero .btn { color: var(--olive); }
 
   /* LAGE: andere Karte (per <picture>), Überschrift normale (größere) Größe */
