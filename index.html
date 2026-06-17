@@ -30,7 +30,7 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=16" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=17" />
 </head>
 <body>
 
@@ -63,7 +63,7 @@
       </div>
       <div class="container">
         <div class="hero__inner">
-          <p class="hero__kicker">Gundelfingen a.d. Donau · Bayerisch-Schwaben</p>
+          <p class="hero__kicker">Gundelfingen a.d. Donau<br />Bayerisch-Schwaben</p>
           <h1>Wir schaffen ein nachhaltiges<br />Zuhause.<span class="claim">Investieren in die Zukunft.</span></h1>
           <p class="hero__sub">Auf dem ehemaligen Schwarz-Areal entsteht ein lebendiges, nachhaltiges Quartier zum Wohnen — mitten in Bayerisch-Schwaben.</p>
           <a href="#investment" class="btn btn--cream">Möglichkeiten besprechen</a>
@@ -162,7 +162,12 @@
     <!-- ============ LAGE ============ -->
     <section class="lage" id="lage">
       <div class="lage__media">
-        <picture><source srcset="assets/img/lage-karte.webp" type="image/webp" /><img src="assets/img/lage-karte.jpg" alt="Kartenausschnitt der Region im Korridor Augsburg–Ulm mit Gundelfingen a.d. Donau." loading="lazy" /></picture>
+        <picture>
+          <source media="(max-width:760px)" srcset="assets/img/lage-karte-mobil.webp" type="image/webp" />
+          <source media="(max-width:760px)" srcset="assets/img/lage-karte-mobil.jpg" />
+          <source srcset="assets/img/lage-karte.webp" type="image/webp" />
+          <img src="assets/img/lage-karte.jpg" alt="Kartenausschnitt der Region im Korridor Augsburg–Ulm mit Gundelfingen a.d. Donau." loading="lazy" />
+        </picture>
       </div>
       <div class="container">
         <div class="lage__panel reveal">
@@ -258,13 +263,12 @@
 
     <!-- ============ KONTAKT (ergänzt) ============ -->
     <section class="section contact" id="kontakt">
-      <div class="container">
-        <span class="eyebrow">Kontakt</span>
-        <hr class="rule" />
-        <h2>Sprechen wir über das Quartier.</h2>
-        <div class="contact__grid" style="margin-top:1.5rem;">
-          <div class="reveal">
-            <p class="contact__lead">Sie haben Fragen zum Quartier oder Interesse an einer Zusammenarbeit? Wir freuen uns auf Ihre Nachricht.</p>
+      <div class="container contact__grid">
+        <div class="contact__left reveal">
+          <span class="eyebrow">Kontakt</span>
+          <hr class="rule" />
+          <h2>Sprechen wir über das Quartier.</h2>
+          <p class="contact__lead" style="margin-top:1.2rem;">Sie haben Fragen zum Quartier oder Interesse an einer Zusammenarbeit? Wir freuen uns auf Ihre Nachricht.</p>
             <ul class="contact__list">
               <li><span class="k">Gesellschaft</span><span class="v">GU-FI GmbH</span></li>
               <li><span class="k">Adresse</span><span class="v">Röntgenstraße 40a, 86368 Gersthofen</span></li>
@@ -281,7 +285,6 @@
             <p class="form__note">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben gemäß <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
             <div class="form__success" id="formSuccess" role="status">Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.</div>
           </form>
-        </div>
       </div>
     </section>
   </main>
@@ -345,6 +348,6 @@
     ]
   }
   </script>
-  <script src="assets/js/app.js?v=16"></script>
+  <script src="assets/js/app.js?v=17"></script>
 </body>
 </html>

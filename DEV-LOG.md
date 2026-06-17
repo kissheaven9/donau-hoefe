@@ -2,6 +2,18 @@
 
 Format: **Problem → Ursache → Fix/Entscheidung**. Neueste oben.
 
+## 2026-06-17 — Hero-Bild neu, Mobil-Version, Kontakt, Closing
+- **Neues Hero-Foto** (Kinder mit Ball am Quartier) + OG-Image neu generiert. **Favicon** = `фавикон.png` (Kundin) für alle Icon-Größen.
+- **Hero Desktop:** Textblock + Button ~1,5–2 cm tiefer; Kicker dünn (Regular) in 2 Zeilen; **Logo größer** (42 px).
+- **Closing:** Foto VOLLSTÄNDIG (in-flow, `height:auto`) → Ball + Füße immer sichtbar (zuvor unten beschnitten trotz object-position).
+- **Kontakt Desktop:** Formular startet jetzt auf Höhe der Überschrift (Headline+Infos in linke Spalte, Form rechts, `align-items:start`).
+- **Mobil (≤760):**
+  - Hero: Bild (rechte Hälfte) ohne Verlauf oben; Text darunter auf Weiß in Dunkelgrün; Button dunkelgrün.
+  - Lage: **andere Karte** (`lage-karte-mobil`, ohne helles Feld) via `<picture media>`; Überschrift wieder normale (größere) Größe.
+  - Entwicklung-Timeline: Linie entfernt, Icons+Text **zentriert** untereinander.
+  - Galerie/Closing: kein Verlauf/Schatten/Streifen; Caption **grün, zentriert, unter dem Foto**.
+  - Mosaik-Labels größer; Burger-Menü ohne Kasten, dünnere Linien.
+
 ## 2026-06-17 — Nachhaltigkeit + Galerie Feinschliff
 - **Nachhaltigkeit – Foto beschnitten/Sektion gestaucht** → Ursache: vorher `min-height`+`object-fit:cover` schnitt oben/unten (Junge/Hase) → Fix: Bild im Fluss (`band__media position:relative`, `img height:auto`), Sektionshöhe = volle Bildhöhe; Junge, Hase und Häuser komplett sichtbar.
 - **Nachhaltigkeit – Textblock zu hoch/mittig** → Fix: `.container position:absolute; align-items:end` → Text unten-links (kicker + H2 + Text).
