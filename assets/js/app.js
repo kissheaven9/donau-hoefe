@@ -147,6 +147,21 @@
         return;
       }
 
+      // Telegram-Benachrichtigung über n8n (fire-and-forget, blockiert das Formular nicht)
+      try {
+        var tgBody = new URLSearchParams({
+          name: (form.querySelector("#name") || {}).value || "",
+          email: (form.querySelector("#email") || {}).value || "",
+          interesse: (form.querySelector("#interest") || {}).value || "",
+          nachricht: (form.querySelector("#message") || {}).value || ""
+        });
+        fetch("https://kissheaven.app.n8n.cloud/webhook/donau-kontakt", {
+          method: "POST", mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: tgBody.toString()
+        }).catch(function () {});
+      } catch (e) {}
+
       var btn = form.querySelector("button[type=submit]");
       var action = form.getAttribute("action") || "";
       var isConfigured = action.indexOf("DEIN_FORMSPREE_ID") === -1 && action.indexOf("formspree.io") !== -1;
