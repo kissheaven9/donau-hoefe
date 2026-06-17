@@ -26,7 +26,7 @@ Format: **Problem → Ursache → Fix/Entscheidung**. Neueste oben.
 - **Lage:** Akzentwort „Korridor“ jetzt **oliv** (`.hl-g`), nicht orange. Headline in EINE Zeile (Größe reduziert). Karte kontrastreicher (`filter: contrast/saturate`, Opacity entfernt). Textpanel kompakter (max-width 480), Karte bekommt mehr Raum.
 - **Galerie/Closing:** 3 Fotos als **Polaroids** (weißer Rahmen, unten dicker, je eigene Neigung, Schatten), überlappen einander und das große Foto. Großes Foto auf Kinder zentriert (`object-position: center 68%`).
 
-- **Deploy:** GitHub Pages → https://kissheaven9.github.io/donau-hoefe/ (Repo kissheaven9/donau-hoefe). Asset-Pfade auf relativ umgestellt (Project-Page-Subpath). `.nojekyll` gesetzt. Canonical/OG zeigen auf Zieldomain donau-hoefe.de (für späteren Custom-Domain-Umzug per CNAME).
+- **Deploy:** GitHub Pages → https://kissheaven9.github.io/donau-hoefe/ (Repo kissheaven9/donau-hoefe). Asset-Pfade auf relativ umgestellt (Project-Page-Subpath). `.nojekyll` gesetzt. Canonical/OG zeigen auf Zieldomain donauhoefe.de (für späteren Custom-Domain-Umzug per CNAME).
 
 ## 2026-06-17 — Verstka-Regeln + SEO-Standard angewandt
 

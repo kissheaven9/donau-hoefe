@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://donau-hoefe.de/</loc>
+    <loc>https://donauhoefe.de/</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://donau-hoefe.de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://donau-hoefe.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://donauhoefe.de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://donauhoefe.de/"/>
   </url>
   <url>
-    <loc>https://donau-hoefe.de/datenschutz.html</loc>
+    <loc>https://donauhoefe.de/datenschutz.html</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://donau-hoefe.de/impressum.html</loc>
+    <loc>https://donauhoefe.de/impressum.html</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
