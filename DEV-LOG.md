@@ -111,3 +111,9 @@ Rückmeldung Olga: zu viele eigene Interpretationen. Korrigiert, strikt nach Dat
 ## 2026-06-17 — Galerie/Hero Feinschliff (Desktop+Mobil)
 - Closing: schwarze Linie unter dem Foto entfernt (war `border-top` der Kontakt-Sektion). Caption ohne Schatten, ~1,5 cm tiefer. Mobil: gleiche Linie weg.
 - Mobil-Hero: nur rechte Bildhälfte (Kinder), Höhe vergrößert (`object-position:82%`, höher).
+
+## 2026-06-17 — Typewriter-Wort, Texte, Mobil-Hero-Foto
+- Hero-Headline: Wort lebendiges/bezahlbares/nachhaltiges als **Schreibmaschine** (tippen/löschen) in GLEAM #ffe687 + blinkende Caret; mobil orange (lesbar auf Weiß); reduced-motion → statisch.
+- Text: Hero-Sub „In Gundelfingen a.d. Donau …"; Projekt-H2 „Hier entsteht ein neues Zuhause."; **Fläche nur Block 2 → 24.000 m²** (Kennzahl/Meta bleiben 22.000 — so gewünscht). Negativ-Begriffe entfernt: „Schwarz-Areal", „Brachfläche", „ehemalig", „Areal" (auch OG/JSON-LD/alt).
+- Closing-Caption ~1 cm tiefer (Ursache: `.band .container` Padding 7rem → `#closing` padding-bottom reduziert).
+- Mobil-Hero: eigenes Foto „фото первый экран для телефона" via `<picture media>`, zentriert.

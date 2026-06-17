@@ -164,6 +164,11 @@ strong { font-weight: 600; }
 .hero__inner { margin-top: clamp(48px, 7vh, 84px); }   /* Textblock ~1,5–2 cm tiefer (wie Macet) */
 .hero h1 { color: var(--cream); margin: 1rem 0 1.2rem; line-height: .98; }
 .hero h1 .claim { display: block; margin-top: .35rem; }
+/* Schreibmaschinen-Wort (lebendiges/bezahlbares/nachhaltiges) im Akzent-Gelb */
+.hl-type { color: var(--pale); }
+.hl-caret { display: inline-block; width: .5ch; height: .82em; margin-left: .02em; background: var(--pale); transform: translateY(.08em); animation: caretBlink 1s steps(1) infinite; }
+@keyframes caretBlink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .hl-caret { display: none; } }
 .hero__sub { font-size: clamp(1.1rem,1.7vw,1.4rem); line-height: 1.45; color: var(--cream); max-width: 620px; margin-bottom: 1.6rem; }
 .hero, .hero * { text-shadow: 0 2px 24px rgba(10,18,2,.4); }
 
@@ -283,7 +288,7 @@ strong { font-weight: 600; }
 #closing { display: block; min-height: 0; margin-top: clamp(-5.5rem, -7vw, -3rem); position: relative; z-index: 1; }
 #closing .band__media { position: relative; }
 #closing .band__media img { width: 100%; height: auto; display: block; }
-#closing .container { position: absolute; inset: 0; display: flex; align-items: flex-end; }
+#closing .container { position: absolute; inset: 0; display: flex; align-items: flex-end; padding-bottom: clamp(2.5rem, 5vw, 4.6rem); }
 .closing .band__inner { margin-left: auto; max-width: 600px; text-align: right; padding-bottom: clamp(.2rem,.8vw,.5rem); position: relative; z-index: 1; }
 .closing h2 { color: var(--white); font-size: clamp(2rem,3.4vw,2.6rem); text-shadow: none; }
 .traeger { position: relative; z-index: 2; }
@@ -388,8 +393,10 @@ strong { font-weight: 600; }
 
   /* HERO: Bild (rechte Hälfte) ohne Verlauf oben, Text darunter auf Weiß in Dunkelgrün */
   .hero { display: block; min-height: 0; isolation: auto; color: var(--ink); }
-  .hero__media { position: relative; height: clamp(330px, 86vw, 520px); z-index: 0; }
-  .hero__media img { object-position: 82% center; }   /* nur rechte Hälfte (Kinder), größer */
+  .hero__media { position: relative; height: clamp(340px, 92vw, 540px); z-index: 0; }
+  .hero__media img { object-position: center 45%; }   /* eigenes Mobil-Foto (Kinder mit Ball) */
+  .hl-type, .hl-caret { color: var(--orange); }
+  .hl-caret { background: var(--orange); }
   .hero::after { display: none; }
   .hero .container { position: static; padding-top: 1.6rem; padding-bottom: .25rem; }
   .hero__inner { margin-top: 0; max-width: none; }

@@ -39,20 +39,31 @@
     if (e.key === "Escape") setNav(false);
   });
 
-  /* ---------- Hero: Wort-Rotation ---------- */
-  var words = ["lebendiges", "bezahlbares", "nachhaltiges"];
-  var wordEl = document.getElementById("rotatorWord");
+  /* ---------- Hero: Schreibmaschinen-Wort (lebendiges/bezahlbares/nachhaltiges) ---------- */
+  var TYPE_WORDS = ["lebendiges", "bezahlbares", "nachhaltiges"];
+  var typeEl = document.getElementById("typeWord");
+  var caretEl = document.getElementById("typeCaret");
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (wordEl && !reduceMotion) {
-    var idx = 0;
-    setInterval(function () {
-      wordEl.classList.add("is-out");
-      setTimeout(function () {
-        idx = (idx + 1) % words.length;
-        wordEl.textContent = words[idx];
-        wordEl.classList.remove("is-out");
-      }, 400);
-    }, 2400);
+  if (typeEl && !reduceMotion) {
+    var wi = 0, ci = 0, deleting = false;
+    typeEl.textContent = "";
+    var typeTick = function () {
+      var word = TYPE_WORDS[wi];
+      if (!deleting) {
+        ci++;
+        typeEl.textContent = word.slice(0, ci);
+        if (ci >= word.length) { deleting = true; setTimeout(typeTick, 1500); return; }
+      } else {
+        ci--;
+        typeEl.textContent = word.slice(0, ci);
+        if (ci <= 0) { deleting = false; wi = (wi + 1) % TYPE_WORDS.length; }
+      }
+      setTimeout(typeTick, deleting ? 55 : 110);
+    };
+    setTimeout(typeTick, 700);
+  } else if (typeEl) {
+    typeEl.textContent = "nachhaltiges";
+    if (caretEl) caretEl.style.display = "none";
   }
 
   /* ---------- Reveal beim Scrollen (nur Sekundär-Inhalt) ---------- */
