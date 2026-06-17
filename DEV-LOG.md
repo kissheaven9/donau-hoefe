@@ -2,6 +2,20 @@
 
 Format: **Problem → Ursache → Fix/Entscheidung**. Neueste oben.
 
+## 2026-06-17 — Nachhaltigkeit + Galerie Feinschliff
+- **Nachhaltigkeit – Foto beschnitten/Sektion gestaucht** → Ursache: vorher `min-height`+`object-fit:cover` schnitt oben/unten (Junge/Hase) → Fix: Bild im Fluss (`band__media position:relative`, `img height:auto`), Sektionshöhe = volle Bildhöhe; Junge, Hase und Häuser komplett sichtbar.
+- **Nachhaltigkeit – Textblock zu hoch/mittig** → Fix: `.container position:absolute; align-items:end` → Text unten-links (kicker + H2 + Text).
+- **Nachhaltigkeit – überflüssige Trennlinie** unter dem Kicker (im Macet nicht vorhanden) → `<hr class="rule">` entfernt. REGEL: keine Deko-Linien, die nicht im Design sind.
+- **Galerie/Closing – Foto unten beschnitten (Ball/Füße fehlten)** → Ursache: `object-position: center 82%` schnitt unten → Fix: `object-position: center bottom` (oben darf beschnitten werden, unten NIE — Ball + Füße immer sichtbar). Text „Ein Ort…“ rechts unten mit lokaler Unterlage.
+
+## 2026-06-17 — 3 Sektionen exakt nach Macet + Deploy
+
+- **Nachhaltigkeit:** Sektion höher (`min-height: clamp(640px,62vw,900px)`), Bild ganz sichtbar (Hase), Headline größer + in untere Drittel (`align-items:flex-end`), Badges echtes Frosted Glass (`backdrop-filter: blur(14px)`, transparent, weißer Rand, helle Schrift).
+- **Lage:** Akzentwort „Korridor“ jetzt **oliv** (`.hl-g`), nicht orange. Headline in EINE Zeile (Größe reduziert). Karte kontrastreicher (`filter: contrast/saturate`, Opacity entfernt). Textpanel kompakter (max-width 480), Karte bekommt mehr Raum.
+- **Galerie/Closing:** 3 Fotos als **Polaroids** (weißer Rahmen, unten dicker, je eigene Neigung, Schatten), überlappen einander und das große Foto. Großes Foto auf Kinder zentriert (`object-position: center 68%`).
+
+- **Deploy:** GitHub Pages → https://kissheaven9.github.io/donau-hoefe/ (Repo kissheaven9/donau-hoefe). Asset-Pfade auf relativ umgestellt (Project-Page-Subpath). `.nojekyll` gesetzt. Canonical/OG zeigen auf Zieldomain donau-hoefe.de (für späteren Custom-Domain-Umzug per CNAME).
+
 ## 2026-06-17 — Verstka-Regeln + SEO-Standard angewandt
 
 **Normalisierungen (Verstka-Regeln, Self-Check):**
