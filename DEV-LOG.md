@@ -107,3 +107,7 @@ Rückmeldung Olga: zu viele eigene Interpretationen. Korrigiert, strikt nach Dat
 - **Headless-Chrome Reveal-Sichtbarkeit.**
   → *Problem:* Reveal-Elemente (`opacity:0` bis IntersectionObserver) könnten im Screenshot unsichtbar bleiben.
   → *Fix:* Screenshot mit `--virtual-time-budget` (≥3000 ms), damit der 2,5 s-Sicherheits-Fallback feuert; im Produktivcode bleibt der Fallback bestehen.
+
+## 2026-06-17 — Galerie/Hero Feinschliff (Desktop+Mobil)
+- Closing: schwarze Linie unter dem Foto entfernt (war `border-top` der Kontakt-Sektion). Caption ohne Schatten, ~1,5 cm tiefer. Mobil: gleiche Linie weg.
+- Mobil-Hero: nur rechte Bildhälfte (Kinder), Höhe vergrößert (`object-position:82%`, höher).
