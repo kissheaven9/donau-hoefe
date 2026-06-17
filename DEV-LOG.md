@@ -128,3 +128,6 @@ Rückmeldung Olga: zu viele eigene Interpretationen. Korrigiert, strikt nach Dat
 - Datenschutz korrigiert: Schriften **self-hosted** (kein Google Fonts), Karte = statisches Bild (keine externen Dienste) → **kein Cookie-Banner nötig**.
 - Recht-Nische (Investment): keine Renditeversprechen; Disclaimer „unverbindlich, Änderungen vorbehalten" vorhanden.
 - Favicon = `фавикон.png` (Kundin), Multi-Size .ico (16/32/48) + Cache-Bust `?v=2`.
+
+## 2026-06-17 — Formspree angebunden
+- Kontaktformular `action` = https://formspree.io/f/maqzzbly; Empfaenger = gufigmbh@gmail.com (Formspree-Konto). Hidden `_subject`. Reply-To = E-Mail-Feld des Absenders (Formspree-Auto).
