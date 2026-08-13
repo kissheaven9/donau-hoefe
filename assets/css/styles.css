@@ -181,6 +181,10 @@ strong { font-weight: 600; }
 .split__body p { font-size: clamp(1.05rem,1.5vw,1.25rem); line-height: 1.5; }
 .split__body p + p { margin-top: 1rem; }
 
+/* ============================================================ QUARTIERSFILM */
+.film { max-width: 1080px; margin: clamp(1.8rem,4vw,2.6rem) auto 0; }
+.film video { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); background: #101408; }
+
 /* ============================================================ QUARTIER — Mosaik */
 .mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(.8rem,1.5vw,1.1rem); }
 .mosaic__row2 { grid-template-columns: repeat(2, 1fr); margin-top: clamp(.8rem,1.5vw,1.1rem); }
