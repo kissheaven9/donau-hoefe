@@ -189,7 +189,7 @@
         else { throw new Error("send failed"); }
       }).catch(function () {
         if (btn) { btn.disabled = false; btn.textContent = "Unterlagen anfordern"; }
-        showError(form.querySelector("#message"), "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie an kontakt@donau-hoefe.de.");
+        showError(form.querySelector("#message"), "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie an kontakt@donauhoefe.de.");
       });
     });
   }
